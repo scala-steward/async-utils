@@ -19,7 +19,9 @@ inThisBuild(List(
 lazy val CatsEffect2V = "2.5.1"
 lazy val CatsEffect3V = "3.1.1"
 lazy val TwitterUtilsLatestV = "21.5.0"
+// scala-steward:off
 lazy val TwitterUtils19_4V = "19.4.0"
+// scala-steward:on
 lazy val CatsTaglessV = "0.14.0"
 
 lazy val SCALA_2_13 = "2.13.6"
@@ -193,7 +195,9 @@ lazy val `async-utils-twitter` = (projectMatrix in file("twitter-futures"))
       libraryDependencies ++= {
         Seq(
           "org.typelevel" %% "cats-effect" % CatsEffect2V,
+// scala-steward:off
           "com.twitter" %% "util-core" % TwitterUtils19_4V,
+// scala-steward:on
         ) ++ (if (scalaVersion.value.startsWith("2")) scala2CompilerPlugins else Nil)
       },
     )
@@ -206,7 +210,9 @@ lazy val `async-utils-twitter` = (projectMatrix in file("twitter-futures"))
       libraryDependencies ++= {
         Seq(
           "org.typelevel" %% "cats-effect" % CatsEffect3V,
+// scala-steward:off
           "com.twitter" %% "util-core" % TwitterUtils19_4V,
+// scala-steward:on
         ) ++ (if (scalaVersion.value.startsWith("2")) scala2CompilerPlugins else Nil)
       },
     )
